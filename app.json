@@ -14,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mzaien.newarch"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mzaien.newarch"
     },
     "web": {
       "bundler": "metro",
@@ -28,7 +30,20 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "@config-plugins/react-native-dynamic-app-icon",
+        {
+          "main": {
+            "image": "./asset/images/react-logo.png",
+            "prerendered": true
+          },
+          "two-ex": {
+            "image": "./asset/images/react-logo@2x.png",
+            "prerendered": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
